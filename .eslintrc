@@ -14,7 +14,9 @@
   ],
   "rules": {
     "no-console": "off",
-    "indent": ["error", 2],
+    "indent": ["error", 4],
+    "no-return-assign": "off",
+    "operator-linebreak": "off",
     "import/extensions": "off", // Расширения файлов при импортах
     "max-len": "warn", // Предупреждать о максимальной длине строки
     "@typescript-eslint/ban-types": "warn", // Предупреждать о некоторых типах
