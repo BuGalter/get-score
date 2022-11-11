@@ -19,7 +19,12 @@ beforeEach(() => {
         { offset: 18, score: { home: 0, away: 0, }, },
         { offset: 21, score: { home: 0, away: 0, }, },
         { offset: 24, score: { home: 0, away: 0, }, },
-        { offset: 26, score: { home: 0, away: 1, }, }
+        { offset: 26, score: { home: 0, away: 1, }, },
+        { offset: 56915, score: { home: 1, away: 2, }, },
+        { offset: 88037, score: { home: 4, away: 4, }, },
+        { offset: 88391, score: { home: 3, away: 3, }, },
+        { offset: 99938, score: { home: 4, away: 6, }, },
+        { offset: 100322, score: { home: 4, away: 5, }, }
     ];
 });
 
@@ -65,14 +70,40 @@ describe('Function getScore defined return correct score:', () => {
         score = { home: 0, away: 0, };
         expect(getScore(gameStamps, offset)).toEqual(score);
     });
+
     test('should return correct score', () => {
         offset = 7;
         score = { home: 1, away: 0, };
         expect(getScore(gameStamps, offset)).toEqual(score);
     });
+
     test('should return correct score', () => {
-        offset = 26;
-        score = { home: 0, away: 1, };
+        offset = 56915;
+        score = { home: 1, away: 2, };
+        expect(getScore(gameStamps, offset)).toEqual(score);
+    });
+
+    test('should return correct score', () => {
+        offset = 88037;
+        score = { home: 4, away: 4, };
+        expect(getScore(gameStamps, offset)).toEqual(score);
+    });
+
+    test('should return correct score', () => {
+        offset = 88391;
+        score = { home: 3, away: 3, };
+        expect(getScore(gameStamps, offset)).toEqual(score);
+    });
+
+    test('should return correct score', () => {
+        offset = 99938;
+        score = { home: 4, away: 6, };
+        expect(getScore(gameStamps, offset)).toEqual(score);
+    });
+
+    test('should return correct score', () => {
+        offset = 100322;
+        score = { home: 4, away: 5, };
         expect(getScore(gameStamps, offset)).toEqual(score);
     });
 });

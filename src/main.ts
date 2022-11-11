@@ -47,9 +47,17 @@ export const generateStamps = (): Stamp[] => {
 
 const scores = generateStamps();
 const offset = 44564;
-const result = getScore(scores, offset);
-console.log(scores);
-console.log(result);
+/* let count = 0;
+for (let i = 0; i < scores.length; i += 1) {
+    const el = scores[i];
+    if (el.score.away > 6) {
+        console.log(el);
+        count += 1;
+    }
+}
+ */const result = getScore(scores, offset);
+// console.log(scores);
+console.log('Result:', result);
 
 // Бинарный поиск по офсет проверить 0, перестал появлятся)))
 // не там смотрел не может быть ноль смотри код
